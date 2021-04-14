@@ -144,8 +144,8 @@ async function post2(tab, s2, link){
 
 async function facebookPost(browser, link, i){
     
-    let loginId = "b7gex2bbq5@the23app.com";
-    let password = "b7gex123";
+    let loginId = "Facebook id";
+    let password = "Facebook Password";
 
     if(i==0){
         
@@ -195,8 +195,8 @@ async function facebookPost(browser, link, i){
 
 async function twitterPost(browser, link, i){
     
-    let loginId = "NamanKeshari3";
-    let password = "naman@100599";
+    let loginId = "twitter id or username";
+    let password = "twitter password";
 
     if(i==0){
         
@@ -270,8 +270,8 @@ async function main(){
     // here starts the main work on creating and downloading the post on canva website.
     let tab = await browser.newPage();
 
-    let id = "naman.manjul@gmail.com";
-    let pass = "naman@10059";
+    let id = "canva id";
+    let pass = "canva password";
     
     await tab.goto("https://www.canva.com/login");
     
@@ -319,6 +319,7 @@ async function main(){
     }
 
     for(let i=0 ; i<maxI ; i++){
+        
         let downTab = await makePosts(posts, i, browser);
 
         await downTab._client.send('Page.setDownloadBehavior', {behavior: 'allow', downloadPath: __dirname});
